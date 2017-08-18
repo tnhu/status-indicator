@@ -1,4 +1,4 @@
-# <status-indicator/>
+# &lt;status-indicator/&gt;
 
 A web component to show status indicator as colored dots. [Demo](https://2z6nk70qx0.codesandbox.io/)
 
