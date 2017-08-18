@@ -1,0 +1,23 @@
+{
+  "name": "status-indicator",
+  "version": "1.0.4",
+  "description": "Status indicator web component",
+  "style": "styles.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tnhu/status-indicator.git"
+  },
+  "keywords": [
+    "status",
+    "indicator",
+    "dot",
+    "color dot",
+    "status dot",
+    "status indicator",
+    "pulse",
+    "pulse dot",
+    "animation"
+  ],
+  "author": "Tan Nhu",
+  "license": "MIT"
+}

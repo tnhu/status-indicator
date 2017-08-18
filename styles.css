@@ -1,0 +1,88 @@
+:root {
+  --status-indicator-color: 216, 226, 233;            /* #D8E2E9 */
+  --status-indicator-color-active: 0, 149, 255;       /* #0095FF */
+  --status-indicator-color-positive: 75, 210, 143;    /* #4BD28F */
+  --status-indicator-color-intermediary: 255, 170, 0; /* #FFAA00 */
+  --status-indicator-color-negative: 255, 77, 77;     /* #FF4D4D */
+  --status-indicator-size: 10px;
+  --status-indicator-animation-time: 2s;
+  --status-indicator-pulse-start-alpha: .5;
+  --status-indicator-pulse-end-alpha: 0;
+}
+
+@keyframes status-indicator-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color), var(--status-indicator-pulse-start-alpha)); }
+  70%  { box-shadow: 0 0 0 var(--status-indicator-size) rgba(var(--status-indicator-color), var(--status-indicator-pulse-end-alpha)); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color), var(--status-indicator-pulse-end-alpha)); }
+}
+
+@keyframes status-indicator-pulse-active {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-active), var(--status-indicator-pulse-start-alpha)); }
+  70%  { box-shadow: 0 0 0 var(--status-indicator-size) rgba(var(--status-indicator-color-active), var(--status-indicator-pulse-end-alpha)); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-active), var(--status-indicator-pulse-end-alpha)); }
+}
+
+@keyframes status-indicator-pulse-positive {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-positive), var(--status-indicator-pulse-start-alpha)); }
+  70%  { box-shadow: 0 0 0 var(--status-indicator-size) rgba(var(--status-indicator-color-positive), var(--status-indicator-pulse-end-alpha)); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-positive), var(--status-indicator-pulse-end-alpha)); }
+}
+
+@keyframes status-indicator-pulse-intermediary {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-intermediary), var(--status-indicator-pulse-start-alpha)); }
+  70%  { box-shadow: 0 0 0 var(--status-indicator-size) rgba(var(--status-indicator-color-intermediary), var(--status-indicator-pulse-end-alpha)); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-intermediary), var(--status-indicator-pulse-end-alpha)); }
+}
+
+@keyframes status-indicator-pulse-negative {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-negative), var(--status-indicator-pulse-start-alpha)); }
+  70%  { box-shadow: 0 0 0 var(--status-indicator-size) rgba(var(--status-indicator-color-negative), var(--status-indicator-pulse-end-alpha)); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--status-indicator-color-negative), var(--status-indicator-pulse-end-alpha)); }
+}
+
+status-indicator {
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  width: var(--status-indicator-size);
+  height: var(--status-indicator-size);
+  background-color: rgb(var(--status-indicator-color));
+}
+
+status-indicator[pulse] {
+  animation: status-indicator-pulse var(--status-indicator-animation-time) infinite;
+}
+
+status-indicator[active] {
+  background-color: rgb(var(--status-indicator-color-active, #0095FF));
+}
+
+status-indicator[active][pulse] {
+  animation-name: status-indicator-pulse-active;
+}
+
+status-indicator[positive] {
+  background-color: rgb(var(--status-indicator-color-positive, #4BD28F));
+  animation-name: status-indicator-pulse-positive;
+}
+
+status-indicator[positive][pulse] {
+  animation-name: status-indicator-pulse-positive;
+}
+
+status-indicator[intermediary] {
+  background-color: rgb(var(--status-indicator-color-intermediary, #FFAA00));
+}
+
+status-indicator[intermediary][pulse] {
+  animation-name: status-indicator-pulse-intermediary;
+}
+
+status-indicator[negative] {
+  background-color: rgb(var(--status-indicator-color-negative, #FF4D4D));
+  animation-name: status-indicator-pulse-negative;
+}
+
+status-indicator[negative][pulse] {
+  animation-name: status-indicator-pulse-negative;
+}
