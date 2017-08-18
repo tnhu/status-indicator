@@ -1,6 +1,6 @@
 # &lt;status-indicator/&gt;
 
-A web component to show status indicator as colored dots. [Demo](https://2z6nk70qx0.codesandbox.io/)
+A web component to show status indicator as colored dots. [Demo](https://2z6nk70qx0.codesandbox.io/).
 
 ## Install
 
@@ -10,18 +10,24 @@ npm i status-indicator
 
 ## Usage
 
-Import status-indicator.css in your CSS or JavaScript
+Import status-indicator.css in your CSS or JavaScript.
+
+CSS:
 
 ```css
 @import 'status-indicator'
 ```
 
+JavaScript:
+
 ```javascript
 import 'status-indicator/styles.css'
 ```
 
+HTML/React:
+
 ```html
-<status-indicator></status-indicator>
+<status-indicator active pulse></status-indicator>
 ```
 
 ### API
