@@ -1,6 +1,6 @@
 {
   "name": "status-indicator",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Status indicator web component",
   "style": "styles.css",
   "repository": {

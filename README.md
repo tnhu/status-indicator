@@ -40,17 +40,35 @@ You are able to customize the dot by CSS variables, default configuration is lis
 
 ```css
 :root {
-  --status-indicator-color: 216, 226, 233;            /* #D8E2E9 */
-  --status-indicator-color-active: 0, 149, 255;       /* #0095FF */
-  --status-indicator-color-positive: 75, 210, 143;    /* #4BD28F */
-  --status-indicator-color-intermediary: 255, 170, 0; /* #FFAA00 */
-  --status-indicator-color-negative: 255, 77, 77;     /* #FF4D4D */
   --status-indicator-size: 10px;
-  --status-indicator-animation-time: 2s;
-  --status-indicator-pulse-start-alpha: .5;
-  --status-indicator-pulse-end-alpha: 0;
-}
-```
+
+  --status-indicator-animation-duration: 2s;
+  --status-indicator-pulse-semi-alpha: .5;
+
+  --status-indicator-color: rgb(216, 226, 233);
+  --status-indicator-color-semi: rgba(216, 226, 233, var(--status-indicator-pulse-semi-alpha));
+  --status-indicator-color-transparent: rgba(216, 226, 233, 0);
+
+  --status-indicator-color-active: rgb(0, 149, 255);
+  --status-indicator-color-active-semi: rgba(0, 149, 255, var(--status-indicator-pulse-semi-alpha));
+  --status-indicator-color-active-transparent: rgba(0, 149, 255, 0);
+
+  --status-indicator-color-positive: rgb(75, 210, 143);
+  --status-indicator-color-positive-semi: rgba(75, 210, 143, var(--status-indicator-pulse-semi-alpha));
+  --status-indicator-color-positive-transparent: rgba(75, 210, 143, 0);
+
+  --status-indicator-color-intermediary: rgb(255, 170, 0);
+  --status-indicator-color-intermediary-semi: rgba(255, 170, 0, var(--status-indicator-pulse-semi-alpha));
+  --status-indicator-color-intermediary-transparent: rgba(255, 170, 0, 0);
+
+  --status-indicator-color-negative: rgb(255, 77, 77);
+  --status-indicator-color-negative-semi: rgba(255, 77, 77, var(--status-indicator-pulse-semi-alpha));
+  --status-indicator-color-negative-transparent: rgba(255, 77, 77, 0);
+}```
+
+### Supported Browsers
+
+Latest versions of Chrome/Firefox/Safari/IE/Opera.
 
 ### LICENSE
 
