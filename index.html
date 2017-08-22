@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>&lt;status-indicator/&gt;</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/status-indicator@1.0.7/styles.css">
 </head>
 
 <body>
@@ -15,6 +15,7 @@
       margin: 0;
       padding: 0;
       display: grid;
+      font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     }
 
     p {
@@ -24,13 +25,14 @@
     }
 
     h1 {
-      text-align: center;
-      margin: 15px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     p > span {
       display: inline-block;
-      width: 10px;
+      width: 20px;
     }
 
     p > span:first-child {
@@ -55,12 +57,12 @@
   </style>
   <h1>&lt;status-indicator/&gt;</h1>
   <p>
-    <span></span>
-    <span></span>
-    <span>active</span>
-    <span>positive</span>
-    <span>intermediary</span>
-    <span>negative</span>
+    <span>&nbsp;</span>
+    <span>&nbsp;</span>
+    <span>[active]</span>
+    <span>[positive]</span>
+    <span>[intermediary]</span>
+    <span>[negative]</span>
   </p>
   <p>
     <span></span>
@@ -71,7 +73,7 @@
     <status-indicator negative></status-indicator>
   </p>
   <p>
-    <span>pulse</span>
+    <span>[pulse]</span>
     <status-indicator pulse></status-indicator>
     <status-indicator active pulse></status-indicator>
     <status-indicator positive pulse></status-indicator>
