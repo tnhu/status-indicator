@@ -2,6 +2,8 @@
 
 A web component to show status indicator as colored dots. [Demo](https://tnhu.github.io/status-indicator/).
 
+![Screenshot](https://i.imgur.com/v1vJ3Ue.gif)
+
 ## Install
 
 ```bash
